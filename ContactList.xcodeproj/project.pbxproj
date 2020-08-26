@@ -76,6 +76,66 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6903DED124F579380005BEAE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6903DED224F5794A0005BEAE /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				6932417724F5763900E83EDA /* Main.storyboard */,
+				6932417C24F5763E00E83EDA /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		6903DED324F579590005BEAE /* Supports */ = {
+			isa = PBXGroup;
+			children = (
+				6932417124F5763900E83EDA /* AppDelegate.swift */,
+				6932417324F5763900E83EDA /* SceneDelegate.swift */,
+				6932417F24F5763E00E83EDA /* Info.plist */,
+			);
+			path = Supports;
+			sourceTree = "<group>";
+		};
+		6903DED424F5796D0005BEAE /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6932417524F5763900E83EDA /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		6903DED524F5797F0005BEAE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6932417A24F5763E00E83EDA /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		6903DED624F57A1C0005BEAE /* Supports */ = {
+			isa = PBXGroup;
+			children = (
+				6932418824F5763F00E83EDA /* ContactListTests.swift */,
+				6932418A24F5763F00E83EDA /* Info.plist */,
+			);
+			path = Supports;
+			sourceTree = "<group>";
+		};
+		6903DED724F57A360005BEAE /* Supports */ = {
+			isa = PBXGroup;
+			children = (
+				6932419324F5763F00E83EDA /* ContactListUITests.swift */,
+				6932419524F5763F00E83EDA /* Info.plist */,
+			);
+			path = Supports;
+			sourceTree = "<group>";
+		};
 		6932416524F5763800E83EDA = {
 			isa = PBXGroup;
 			children = (
@@ -99,13 +159,11 @@
 		6932417024F5763900E83EDA /* ContactList */ = {
 			isa = PBXGroup;
 			children = (
-				6932417124F5763900E83EDA /* AppDelegate.swift */,
-				6932417324F5763900E83EDA /* SceneDelegate.swift */,
-				6932417524F5763900E83EDA /* ViewController.swift */,
-				6932417724F5763900E83EDA /* Main.storyboard */,
-				6932417A24F5763E00E83EDA /* Assets.xcassets */,
-				6932417C24F5763E00E83EDA /* LaunchScreen.storyboard */,
-				6932417F24F5763E00E83EDA /* Info.plist */,
+				6903DED124F579380005BEAE /* Models */,
+				6903DED424F5796D0005BEAE /* ViewControllers */,
+				6903DED224F5794A0005BEAE /* Storyboards */,
+				6903DED524F5797F0005BEAE /* Resources */,
+				6903DED324F579590005BEAE /* Supports */,
 			);
 			path = ContactList;
 			sourceTree = "<group>";
@@ -113,8 +171,7 @@
 		6932418724F5763F00E83EDA /* ContactListTests */ = {
 			isa = PBXGroup;
 			children = (
-				6932418824F5763F00E83EDA /* ContactListTests.swift */,
-				6932418A24F5763F00E83EDA /* Info.plist */,
+				6903DED624F57A1C0005BEAE /* Supports */,
 			);
 			path = ContactListTests;
 			sourceTree = "<group>";
@@ -122,8 +179,7 @@
 		6932419224F5763F00E83EDA /* ContactListUITests */ = {
 			isa = PBXGroup;
 			children = (
-				6932419324F5763F00E83EDA /* ContactListUITests.swift */,
-				6932419524F5763F00E83EDA /* Info.plist */,
+				6903DED724F57A360005BEAE /* Supports */,
 			);
 			path = ContactListUITests;
 			sourceTree = "<group>";
@@ -436,7 +492,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XJN9TW8RPS;
-				INFOPLIST_FILE = ContactList/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/ContactList/Supports/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -454,7 +510,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XJN9TW8RPS;
-				INFOPLIST_FILE = ContactList/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/ContactList/Supports/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -473,7 +529,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XJN9TW8RPS;
-				INFOPLIST_FILE = ContactListTests/Info.plist;
+				INFOPLIST_FILE = ContactListTests/Supports/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -495,7 +551,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XJN9TW8RPS;
-				INFOPLIST_FILE = ContactListTests/Info.plist;
+				INFOPLIST_FILE = ContactListTests/Supports/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -516,7 +572,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XJN9TW8RPS;
-				INFOPLIST_FILE = ContactListUITests/Info.plist;
+				INFOPLIST_FILE = ContactListUITests/Supports/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -536,7 +592,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XJN9TW8RPS;
-				INFOPLIST_FILE = ContactListUITests/Info.plist;
+				INFOPLIST_FILE = ContactListUITests/Supports/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
