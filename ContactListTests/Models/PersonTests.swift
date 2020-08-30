@@ -50,4 +50,21 @@ class PersonTests: XCTestCase {
         let person = Person(name: "Foo", surname: "Bar", phone: "Baz")
         XCTAssertNotNil(person.date)
     }
+    
+    func testInitPersonWithImage() {
+        let image = #imageLiteral(resourceName: "avatar")
+        let imageData = image.pngData()
+        let person = Person(name: "Foo", phone: "Bar", imageData: imageData)
+        XCTAssertNotNil(person.imageData)
+    }
+    
+    func testInitPersonWithFullNameAndImage() {
+        let image = #imageLiteral(resourceName: "avatar")
+        let imageData = image.pngData()
+        let person = Person(name: "Foo",
+                            surname: "Bar",
+                            phone: "Baz",
+                            imageData: imageData)
+        XCTAssertNotNil(person.imageData)
+    }
 }
