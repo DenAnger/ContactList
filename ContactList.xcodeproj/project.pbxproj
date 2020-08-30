@@ -15,6 +15,8 @@
 		6932417E24F5763E00E83EDA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6932417C24F5763E00E83EDA /* LaunchScreen.storyboard */; };
 		6932418924F5763F00E83EDA /* ContactListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6932418824F5763F00E83EDA /* ContactListTests.swift */; };
 		6932419424F5763F00E83EDA /* ContactListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6932419324F5763F00E83EDA /* ContactListUITests.swift */; };
+		6932506324FB5DD100F7F72B /* PersonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6932506224FB5DD100F7F72B /* PersonTests.swift */; };
+		6932506524FB5FCC00F7F72B /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6932506424FB5FCC00F7F72B /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		6932418F24F5763F00E83EDA /* ContactListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContactListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6932419324F5763F00E83EDA /* ContactListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListUITests.swift; sourceTree = "<group>"; };
 		6932419524F5763F00E83EDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6932506224FB5DD100F7F72B /* PersonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTests.swift; sourceTree = "<group>"; };
+		6932506424FB5FCC00F7F72B /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,7 @@
 		6903DED124F579380005BEAE /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				6932506424FB5FCC00F7F72B /* Person.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -171,6 +176,7 @@
 		6932418724F5763F00E83EDA /* ContactListTests */ = {
 			isa = PBXGroup;
 			children = (
+				6932506124FB5D9600F7F72B /* Models */,
 				6903DED624F57A1C0005BEAE /* Supports */,
 			);
 			path = ContactListTests;
@@ -182,6 +188,14 @@
 				6903DED724F57A360005BEAE /* Supports */,
 			);
 			path = ContactListUITests;
+			sourceTree = "<group>";
+		};
+		6932506124FB5D9600F7F72B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6932506224FB5DD100F7F72B /* PersonTests.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,6 +331,7 @@
 			files = (
 				6932417624F5763900E83EDA /* ViewController.swift in Sources */,
 				6932417224F5763900E83EDA /* AppDelegate.swift in Sources */,
+				6932506524FB5FCC00F7F72B /* Person.swift in Sources */,
 				6932417424F5763900E83EDA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -325,6 +340,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6932506324FB5DD100F7F72B /* PersonTests.swift in Sources */,
 				6932418924F5763F00E83EDA /* ContactListTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
