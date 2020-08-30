@@ -10,13 +10,20 @@ import XCTest
 @testable import ContactList
 
 class PersonTests: XCTestCase {
+    
+    var image: UIImage?
+    var imageData: Data?
 
     override func setUpWithError() throws {
         try super.setUpWithError()
+        image = #imageLiteral(resourceName: "avatar")
+        guard let image = image else { return }
+        imageData = image.pngData()
     }
 
     override func tearDownWithError() throws {
-        
+        image = nil
+        imageData = nil
         try super.tearDownWithError()
     }
     
@@ -46,21 +53,17 @@ class PersonTests: XCTestCase {
         XCTAssertNotNil(person.date)
     }
     
-    func testInitPersonWithFullNameAndWithDate() {
+    func testInitPersonWithFullNameAndDate() {
         let person = Person(name: "Foo", surname: "Bar", phone: "Baz")
         XCTAssertNotNil(person.date)
     }
     
     func testInitPersonWithImage() {
-        let image = #imageLiteral(resourceName: "avatar")
-        let imageData = image.pngData()
         let person = Person(name: "Foo", phone: "Bar", imageData: imageData)
         XCTAssertNotNil(person.imageData)
     }
     
     func testInitPersonWithFullNameAndImage() {
-        let image = #imageLiteral(resourceName: "avatar")
-        let imageData = image.pngData()
         let person = Person(name: "Foo",
                             surname: "Bar",
                             phone: "Baz",
