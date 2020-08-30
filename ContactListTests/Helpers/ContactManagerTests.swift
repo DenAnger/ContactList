@@ -24,5 +24,11 @@ class ContactManagerTests: XCTestCase {
         let contactManeger = ContactManager()
         XCTAssertEqual(contactManeger.contactsCount, 0)
     }
-
+    
+    func testAddPersonIncrementContactListCount() {
+        let contactManager = ContactManager()
+        let person = Person(name: "Foo", phone: "Bar")
+        contactManager.add(person: person)
+        XCTAssertEqual(contactManager.contactsCount, 1)
+    }
 }

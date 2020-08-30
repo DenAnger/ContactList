@@ -9,5 +9,9 @@
 import Foundation
 
 class ContactManager {
-    let contactsCount = 0
+    var contactsCount = 0
+    
+    func add(person: Person) {
+        contactsCount += 1
+    }
 }
