@@ -12,15 +12,18 @@ struct Person {
     var name: String
     var phone: String
     var surname: String?
+    var date: Date?
     
     init(name: String, phone: String) {
         self.name = name
         self.phone = phone
+        date = Date()
     }
     
     init(name: String, surname: String, phone: String) {
         self.name = name
         self.surname = surname
         self.phone = phone
+        date = Date()
     }
 }

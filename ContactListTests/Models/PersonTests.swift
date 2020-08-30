@@ -40,4 +40,14 @@ class PersonTests: XCTestCase {
         let person = Person(name: "Foo", surname: "Bar", phone: "Baz")
         XCTAssertTrue(person.surname == "Bar")
     }
+    
+    func testInitPersonWithDate() {
+        let person = Person(name: "Foo", phone: "Bar")
+        XCTAssertNotNil(person.date)
+    }
+    
+    func testInitPersonWithFullNameAndWithDate() {
+        let person = Person(name: "Foo", surname: "Bar", phone: "Baz")
+        XCTAssertNotNil(person.date)
+    }
 }
