@@ -10,23 +10,24 @@ import XCTest
 @testable import ContactList
 
 class ContactManagerTests: XCTestCase {
+    
+    var contactManager: ContactManager!
 
     override func setUpWithError() throws {
         try super.setUpWithError()
+        contactManager = ContactManager()
     }
 
     override func tearDownWithError() throws {
-        
+        contactManager = nil
         try super.tearDownWithError()
     }
     
     func testInitContactManagerWithEmptyList() {
-        let contactManeger = ContactManager()
-        XCTAssertEqual(contactManeger.contactsCount, 0)
+        XCTAssertEqual(contactManager.contactsCount, 0)
     }
     
     func testAddPersonIncrementContactListCount() {
-        let contactManager = ContactManager()
         let person = Person(name: "Foo", phone: "Bar")
         contactManager.add(person: person)
         XCTAssertEqual(contactManager.contactsCount, 1)
