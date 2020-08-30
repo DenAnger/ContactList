@@ -24,4 +24,20 @@ class PersonTests: XCTestCase {
         let person = Person(name: "Foo", phone: "Bar")
         XCTAssertNotNil(person)
     }
+    
+    func testInitPersonWithFullNameAndPhone() {
+        let person = Person(name: "Foo", surname: "Bar", phone: "Baz")
+        XCTAssertNotNil(person)
+    }
+    
+    func testWhenGivenNameAndPhoneSetsNameAndPhone() {
+        let person = Person(name: "Foo", phone: "Bar")
+        XCTAssertEqual(person.name, "Foo")
+        XCTAssertEqual(person.phone, "Bar")
+    }
+    
+    func testWhenGivenSurnameSetsSurname() {
+        let person = Person(name: "Foo", surname: "Bar", phone: "Baz")
+        XCTAssertTrue(person.surname == "Bar")
+    }
 }
