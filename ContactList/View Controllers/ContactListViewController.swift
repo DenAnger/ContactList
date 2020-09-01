@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ContactListViewController.swift
 //  ContactList
 //
 //  Created by Denis Abramov on 25.08.2020.
@@ -8,6 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ContactListViewController: UIViewController {
 
+    @IBOutlet var tableView: UITableView!
 }
