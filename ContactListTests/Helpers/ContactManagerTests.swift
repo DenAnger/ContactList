@@ -12,14 +12,17 @@ import XCTest
 class ContactManagerTests: XCTestCase {
     
     var contactManager: ContactManager!
+    var person: Person!
 
     override func setUpWithError() throws {
         try super.setUpWithError()
         contactManager = ContactManager()
+        person = Person(name: "Foo", phone: "Bar")
     }
 
     override func tearDownWithError() throws {
         contactManager = nil
+        person = nil
         try super.tearDownWithError()
     }
     
@@ -28,15 +31,13 @@ class ContactManagerTests: XCTestCase {
     }
     
     func testAddPersonIncrementContactListCount() {
-        let person = Person(name: "Foo", phone: "Bar")
         contactManager.add(person: person)
         XCTAssertEqual(contactManager.contactsCount, 1)
     }
     
     func testContactAtIndexIsAddedPerson() {
-        let person = Person(name: "Foo", phone: "Bar")
         contactManager.add(person: person)
         let returnedPerson = contactManager.person(at: 0)
-        XCTAssertEqual(person.name, returnedPerson.name)
+        XCTAssertEqual(person, returnedPerson)
     }
 }

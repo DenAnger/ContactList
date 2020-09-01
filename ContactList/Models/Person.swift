@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Person {
+struct Person: Equatable {
     var name: String
     var phone: String
     var surname: String?

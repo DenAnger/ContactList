@@ -9,12 +9,11 @@
 import Foundation
 
 class ContactManager {
-    var contactsCount = 0
+    var contactsCount: Int { return persons.count }
     
     private var persons: [Person] = []
     
     func add(person: Person) {
-        contactsCount += 1
         persons.append(person)
     }
     
