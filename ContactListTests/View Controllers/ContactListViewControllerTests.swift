@@ -28,4 +28,13 @@ class ContactListViewControllerTests: XCTestCase {
         sut.loadViewIfNeeded()
         XCTAssertNotNil(sut.tableView)
     }
+    
+    func testWhenViewIsLoadedContactListDataSourceIsNotNil() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let sut = storyboard.instantiateViewController(
+            withIdentifier: "ContactListViewController"
+        ) as! ContactListViewController
+        sut.loadViewIfNeeded()
+        XCTAssertNotNil(sut.dataSource)
+    }
 }
