@@ -11,7 +11,14 @@ import Foundation
 class ContactManager {
     var contactsCount = 0
     
+    private var persons: [Person] = []
+    
     func add(person: Person) {
         contactsCount += 1
+        persons.append(person)
+    }
+    
+    func person(at index: Int) -> Person {
+        return persons[index]
     }
 }
