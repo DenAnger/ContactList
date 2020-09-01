@@ -14,7 +14,9 @@ class ContactManager {
     private var persons: [Person] = []
     
     func add(person: Person) {
-        persons.append(person)
+        if !persons.contains(person) {
+            persons.append(person)
+        }
     }
     
     func person(at index: Int) -> Person {
