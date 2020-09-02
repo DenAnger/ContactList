@@ -43,4 +43,13 @@ class ContactListDataSourceTests: XCTestCase {
         tableView.reloadData()
         XCTAssertEqual(tableView.numberOfRows(inSection: 0), 2)
     }
+    
+    func testCellForRowAtIndexPathReturnsContactCell() {
+        dataSource.contactManager?.add(person: Person(name: "Foo",
+                                                      phone: "Bar"))
+        tableView.reloadData()
+        
+        let cell = tableView.cellForRow(at: IndexPath(row: 0, section: 0))
+        XCTAssertTrue(cell is ContactCell)
+    }
 }

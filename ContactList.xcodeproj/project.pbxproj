@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		690499C424FE4C330006FBE6 /* ContactListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690499C324FE4C330006FBE6 /* ContactListDataSource.swift */; };
 		69307AE824FF60CB0083AA63 /* ContactListDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69307AE724FF60CB0083AA63 /* ContactListDataSourceTests.swift */; };
+		69307AEA24FF70B40083AA63 /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69307AE924FF70B40083AA63 /* ContactCell.swift */; };
 		6932417224F5763900E83EDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6932417124F5763900E83EDA /* AppDelegate.swift */; };
 		6932417424F5763900E83EDA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6932417324F5763900E83EDA /* SceneDelegate.swift */; };
 		6932417624F5763900E83EDA /* ContactListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6932417524F5763900E83EDA /* ContactListViewController.swift */; };
@@ -44,6 +45,7 @@
 /* Begin PBXFileReference section */
 		690499C324FE4C330006FBE6 /* ContactListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListDataSource.swift; sourceTree = "<group>"; };
 		69307AE724FF60CB0083AA63 /* ContactListDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListDataSourceTests.swift; sourceTree = "<group>"; };
+		69307AE924FF70B40083AA63 /* ContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
 		6932416E24F5763900E83EDA /* ContactList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6932417124F5763900E83EDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6932417324F5763900E83EDA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -234,6 +236,7 @@
 		696E558624FE269D0080FE60 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				69307AE924FF70B40083AA63 /* ContactCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -389,6 +392,7 @@
 				6932417224F5763900E83EDA /* AppDelegate.swift in Sources */,
 				690499C424FE4C330006FBE6 /* ContactListDataSource.swift in Sources */,
 				6932506524FB5FCC00F7F72B /* Person.swift in Sources */,
+				69307AEA24FF70B40083AA63 /* ContactCell.swift in Sources */,
 				6932417424F5763900E83EDA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
