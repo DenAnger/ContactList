@@ -28,4 +28,14 @@ class ContactListDataSourceTests: XCTestCase {
         let numberOfSection = tableView.numberOfSections
         XCTAssertEqual(numberOfSection, 1)
     }
+    
+    func testNumberOfRowEqualsContactListCount() {
+        let dataSource = ContactListDataSource()
+        let tableView = UITableView()
+        tableView.dataSource = dataSource
+        
+        dataSource.contactManager?.add(person: Person(name: "Foo",
+                                                      phone: "Bar"))
+        XCTAssertEqual(tableView.numberOfRows(inSection: 0), 1)
+    }
 }
