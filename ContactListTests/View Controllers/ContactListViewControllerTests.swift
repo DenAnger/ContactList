@@ -34,4 +34,8 @@ class ContactListViewControllerTests: XCTestCase {
     func testWhenViewIsLoadedContactListDataSourceIsNotNil() {
         XCTAssertNotNil(sut.dataSource)
     }
+    
+    func testWhenViewIsLoadedTableViewDataSourceIsSet() {
+        XCTAssertTrue(sut.tableView.dataSource is ContactListDataSource)
+    }
 }
