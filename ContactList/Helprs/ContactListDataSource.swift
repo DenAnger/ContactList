@@ -16,7 +16,7 @@ class ContactListDataSource: NSObject {
 extension ContactListDataSource: UITableViewDataSource {
     func tableView(_ tableView: UITableView,
                    numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return contactManager?.contactsCount ?? 0
     }
     
     func tableView(_ tableView: UITableView,
