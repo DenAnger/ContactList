@@ -10,32 +10,30 @@ import XCTest
 @testable import ContactList
 
 class ContactListDataSourceTests: XCTestCase {
+    
+    var dataSource: ContactListDataSource!
+    var tableView: UITableView!
 
     override func setUpWithError() throws {
         try super.setUpWithError()
+        dataSource = ContactListDataSource()
+        dataSource.contactManager = ContactManager()
+        tableView = UITableView()
+        tableView.dataSource = dataSource
     }
 
     override func tearDownWithError() throws {
-
+        dataSource = nil
+        tableView = nil
         try super.tearDownWithError()
     }
     
     func testHasOneSection() {
-        let dataSource = ContactListDataSource()
-        let tableView = UITableView()
-        tableView.dataSource = dataSource
-        
         let numberOfSection = tableView.numberOfSections
         XCTAssertEqual(numberOfSection, 1)
     }
     
     func testNumberOfRowEqualsContactListCount() {
-        let dataSource = ContactListDataSource()
-        dataSource.contactManager = ContactManager()
-        
-        let tableView = UITableView()
-        tableView.dataSource = dataSource
-        
         dataSource.contactManager?.add(person: Person(name: "Foo",
                                                       phone: "Bar"))
         XCTAssertEqual(tableView.numberOfRows(inSection: 0), 1)
