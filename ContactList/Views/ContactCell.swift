@@ -9,5 +9,7 @@
 import UIKit
 
 class ContactCell: UITableViewCell {
-    
+    func configure(with person: Person) {
+        
+    }
 }

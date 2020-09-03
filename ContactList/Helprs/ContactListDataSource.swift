@@ -23,6 +23,9 @@ extension ContactListDataSource: UITableViewDataSource {
                    cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell",
                                                  for: indexPath) as! ContactCell
+        if let person = contactManager?.person(at: indexPath.row) {
+            cell.configure(with: person)
+        }
         return cell
     }
 }

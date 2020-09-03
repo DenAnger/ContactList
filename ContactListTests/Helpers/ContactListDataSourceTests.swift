@@ -74,6 +74,23 @@ class ContactListDataSourceTests: XCTestCase {
         _ = mockTableView.cellForRow(at: IndexPath(row: 0, section: 0))
         XCTAssert(mockTableView.cellIsDequeued)
     }
+    
+    func testCellForRowCallsConfigureCell() {
+        let mockTableView = MockTableView()
+        mockTableView.dataSource = dataSource
+        mockTableView.register(MockContactCell.self,
+                               forCellReuseIdentifier: "cell")
+        
+        let person = Person(name: "Foo", phone: "Bar")
+        dataSource.contactManager?.add(person: person)
+        mockTableView.reloadData()
+        
+        let cell = mockTableView.cellForRow(
+            at: IndexPath(row: 0,
+                          section: 0)
+            ) as! MockContactCell
+        XCTAssertEqual(cell.person, person)
+    }
 }
 
 extension ContactListDataSourceTests {
@@ -87,6 +104,14 @@ extension ContactListDataSourceTests {
             cellIsDequeued = true
             return super.dequeueReusableCell(withIdentifier: identifier,
                                              for: indexPath)
+        }
+    }
+    
+    class MockContactCell: ContactCell {
+        var person: Person?
+        
+        override func configure(with person: Person) {
+            self.person = person
         }
     }
 }
