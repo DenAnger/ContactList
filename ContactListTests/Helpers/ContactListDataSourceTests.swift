@@ -13,18 +13,27 @@ class ContactListDataSourceTests: XCTestCase {
     
     var dataSource: ContactListDataSource!
     var tableView: UITableView!
+    var contactListVC: ContactListViewController!
 
     override func setUpWithError() throws {
         try super.setUpWithError()
         dataSource = ContactListDataSource()
         dataSource.contactManager = ContactManager()
-        tableView = UITableView()
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        contactListVC = storyboard.instantiateViewController(
+            withIdentifier: "ContactListViewController"
+            ) as? ContactListViewController
+        contactListVC.loadViewIfNeeded()
+        
+        tableView = contactListVC.tableView
         tableView.dataSource = dataSource
     }
 
     override func tearDownWithError() throws {
         dataSource = nil
         tableView = nil
+        contactListVC = nil
         try super.tearDownWithError()
     }
     
@@ -51,5 +60,33 @@ class ContactListDataSourceTests: XCTestCase {
         
         let cell = tableView.cellForRow(at: IndexPath(row: 0, section: 0))
         XCTAssertTrue(cell is ContactCell)
+    }
+    
+    func testCellForRowDequeuesCellFromTableView() {
+        let mockTableView = MockTableView()
+        mockTableView.dataSource = dataSource
+        mockTableView.register(ContactCell.self, forCellReuseIdentifier: "cell")
+        
+        dataSource.contactManager?.add(person: Person(name: "Foo",
+                                                      phone: "Bar"))
+        mockTableView.reloadData()
+        
+        _ = mockTableView.cellForRow(at: IndexPath(row: 0, section: 0))
+        XCTAssert(mockTableView.cellIsDequeued)
+    }
+}
+
+extension ContactListDataSourceTests {
+    class MockTableView: UITableView {
+        var cellIsDequeued = false
+        
+        override func dequeueReusableCell(
+            withIdentifier identifier: String,
+            for indexPath: IndexPath
+        ) -> UITableViewCell {
+            cellIsDequeued = true
+            return super.dequeueReusableCell(withIdentifier: identifier,
+                                             for: indexPath)
+        }
     }
 }

@@ -21,6 +21,8 @@ extension ContactListDataSource: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView,
                    cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return ContactCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell",
+                                                 for: indexPath) as! ContactCell
+        return cell
     }
 }
