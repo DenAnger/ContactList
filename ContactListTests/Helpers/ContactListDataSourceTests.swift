@@ -12,63 +12,58 @@ import XCTest
 class ContactListDataSourceTests: XCTestCase {
     
     var dataSource: ContactListDataSource!
-    var tableView: UITableView!
+    var mockTableView: MockTableView!
     var contactListVC: ContactListViewController!
+    var person: Person!
 
     override func setUpWithError() throws {
         try super.setUpWithError()
         dataSource = ContactListDataSource()
         dataSource.contactManager = ContactManager()
         
+        mockTableView = MockTableView.mockTableView(withDataSource: dataSource)
+        person = Person(name: "Foo", phone: "Bar")
+        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         contactListVC = storyboard.instantiateViewController(
             withIdentifier: "ContactListViewController"
             ) as? ContactListViewController
         contactListVC.loadViewIfNeeded()
-        
-        tableView = contactListVC.tableView
-        tableView.dataSource = dataSource
     }
 
     override func tearDownWithError() throws {
         dataSource = nil
-        tableView = nil
+        mockTableView = nil
         contactListVC = nil
+        person = nil
         try super.tearDownWithError()
     }
     
     func testHasOneSection() {
-        let numberOfSection = tableView.numberOfSections
+        let numberOfSection = mockTableView.numberOfSections
         XCTAssertEqual(numberOfSection, 1)
     }
     
     func testNumberOfRowEqualsContactListCount() {
-        dataSource.contactManager?.add(person: Person(name: "Foo",
-                                                      phone: "Bar"))
-        XCTAssertEqual(tableView.numberOfRows(inSection: 0), 1)
+        dataSource.contactManager?.add(person: person)
+        XCTAssertEqual(mockTableView.numberOfRows(inSection: 0), 1)
         
         dataSource.contactManager?.add(person: Person(name: "Baz",
                                                       phone: "Foo"))
-        tableView.reloadData()
-        XCTAssertEqual(tableView.numberOfRows(inSection: 0), 2)
+        mockTableView.reloadData()
+        XCTAssertEqual(mockTableView.numberOfRows(inSection: 0), 2)
     }
     
     func testCellForRowAtIndexPathReturnsContactCell() {
-        dataSource.contactManager?.add(person: Person(name: "Foo",
-                                                      phone: "Bar"))
-        tableView.reloadData()
+        dataSource.contactManager?.add(person: person)
+        mockTableView.reloadData()
         
-        let cell = tableView.cellForRow(at: IndexPath(row: 0, section: 0))
+        let cell = mockTableView.cellForRow(at: IndexPath(row: 0, section: 0))
         XCTAssertTrue(cell is ContactCell)
     }
     
     func testCellForRowDequeuesCellFromTableView() {
-        let mockTableView = MockTableView()
-        mockTableView.dataSource = dataSource
-        mockTableView.register(ContactCell.self, forCellReuseIdentifier: "cell")
-        
-        dataSource.contactManager?.add(person: Person(name: "Foo",
-                                                      phone: "Bar"))
+        dataSource.contactManager?.add(person: person)
         mockTableView.reloadData()
         
         _ = mockTableView.cellForRow(at: IndexPath(row: 0, section: 0))
@@ -76,12 +71,6 @@ class ContactListDataSourceTests: XCTestCase {
     }
     
     func testCellForRowCallsConfigureCell() {
-        let mockTableView = MockTableView()
-        mockTableView.dataSource = dataSource
-        mockTableView.register(MockContactCell.self,
-                               forCellReuseIdentifier: "cell")
-        
-        let person = Person(name: "Foo", phone: "Bar")
         dataSource.contactManager?.add(person: person)
         mockTableView.reloadData()
         
@@ -104,6 +93,16 @@ extension ContactListDataSourceTests {
             cellIsDequeued = true
             return super.dequeueReusableCell(withIdentifier: identifier,
                                              for: indexPath)
+        }
+        
+        static func mockTableView(
+            withDataSource dataSource: UITableViewDataSource
+        ) -> MockTableView {
+            let mockTableView = MockTableView()
+            mockTableView.dataSource = dataSource
+            mockTableView.register(MockContactCell.self,
+                                   forCellReuseIdentifier: "cell")
+            return mockTableView
         }
     }
     
