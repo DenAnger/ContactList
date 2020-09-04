@@ -43,6 +43,12 @@ class ContactCellTests: XCTestCase {
     func testCellHasNameLabelInContentView() {
         XCTAssertTrue(cell.nameLabel.isDescendant(of: cell.contentView))
     }
+    
+    func testConfigureSetsName() {
+        let person = Person(name: "Foo", phone: "Bar")
+        cell.configure(with: person)
+        XCTAssertEqual(cell.nameLabel.text, person.name)
+    }
 }
 
 extension ContactCellTests {
