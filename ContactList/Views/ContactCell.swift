@@ -9,6 +9,9 @@
 import UIKit
 
 class ContactCell: UITableViewCell {
+    
+    var nameLabel = UILabel()
+    
     func configure(with person: Person) {
         
     }
