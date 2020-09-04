@@ -25,7 +25,24 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LKz-GM-5T0" id="Xm0-L5-fdJ">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rOE-I2-IbN">
+                                                    <rect key="frame" x="20" y="11" width="374" height="21.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="rOE-I2-IbN" firstAttribute="leading" secondItem="Xm0-L5-fdJ" secondAttribute="leadingMargin" id="3hl-cC-cPe"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="rOE-I2-IbN" secondAttribute="trailing" id="70a-nt-QdV"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="rOE-I2-IbN" secondAttribute="bottom" id="UkS-Xw-S6z"/>
+                                                <constraint firstItem="rOE-I2-IbN" firstAttribute="top" secondItem="Xm0-L5-fdJ" secondAttribute="topMargin" id="ebY-tX-oWY"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="rOE-I2-IbN" id="VGj-2T-StX"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

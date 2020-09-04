@@ -37,6 +37,24 @@ class ContactCellTests: XCTestCase {
             ) as! ContactCell
         XCTAssertNotNil(cell.nameLabel)
     }
+    
+    func testCellHasNameLabelInContentView() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = storyboard.instantiateViewController(
+            identifier: "ContactListViewController"
+            ) as! ContactListViewController
+        viewController.loadViewIfNeeded()
+        
+        let tableView = viewController.tableView
+        let dataSource = MockTableViewDataSource()
+        tableView?.dataSource = dataSource
+        
+        let cell = tableView?.dequeueReusableCell(
+            withIdentifier: "cell",
+            for: IndexPath(row: 0, section: 0)
+            ) as! ContactCell
+        XCTAssertTrue(cell.nameLabel.isDescendant(of: cell.contentView))
+    }
 }
 
 extension ContactCellTests {

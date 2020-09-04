@@ -10,7 +10,7 @@ import UIKit
 
 class ContactCell: UITableViewCell {
     
-    var nameLabel = UILabel()
+    @IBOutlet var nameLabel: UILabel!
     
     func configure(with person: Person) {
         
