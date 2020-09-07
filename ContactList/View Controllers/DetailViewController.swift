@@ -11,4 +11,5 @@ import UIKit
 class DetailViewController: UIViewController {
     
     @IBOutlet var nameLabel: UILabel!
+    var surnameLabel = UILabel()
 }

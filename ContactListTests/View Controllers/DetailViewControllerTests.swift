@@ -34,4 +34,9 @@ class DetailViewControllerTests: XCTestCase {
     func testHasNameLabelInView() {
         XCTAssertTrue(sut.nameLabel.isDescendant(of: sut.view))
     }
+    
+    func testHasSurnameLabel() {
+        XCTAssertNotNil(sut.surnameLabel)
+    }
+    
 }
