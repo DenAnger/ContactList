@@ -86,18 +86,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PO3-re-3Ad">
+                                <rect key="frame" x="159.5" y="416" width="95" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="FjH-dS-v7T" firstAttribute="centerX" secondItem="XVQ-bR-ShX" secondAttribute="centerX" id="2Fi-NO-RZt"/>
                             <constraint firstItem="zVT-BB-OKb" firstAttribute="top" secondItem="zSH-8A-syR" secondAttribute="top" constant="270" id="9Ih-OU-uTb"/>
+                            <constraint firstItem="PO3-re-3Ad" firstAttribute="top" secondItem="FjH-dS-v7T" secondAttribute="bottom" constant="30" id="U3g-Xc-C7f"/>
                             <constraint firstItem="FjH-dS-v7T" firstAttribute="top" secondItem="zVT-BB-OKb" secondAttribute="bottom" constant="30" id="ekL-0F-eNY"/>
+                            <constraint firstItem="PO3-re-3Ad" firstAttribute="centerX" secondItem="XVQ-bR-ShX" secondAttribute="centerX" id="kUl-3T-6Eq"/>
                             <constraint firstItem="zVT-BB-OKb" firstAttribute="centerX" secondItem="XVQ-bR-ShX" secondAttribute="centerX" id="mgt-gA-jSd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zSH-8A-syR"/>
                     </view>
                     <connections>
                         <outlet property="nameLabel" destination="zVT-BB-OKb" id="MSP-PW-fci"/>
+                        <outlet property="phoneLabel" destination="PO3-re-3Ad" id="xxl-J6-dtZ"/>
                         <outlet property="surnameLabel" destination="FjH-dS-v7T" id="ayp-Tc-2VI"/>
                     </connections>
                 </viewController>
