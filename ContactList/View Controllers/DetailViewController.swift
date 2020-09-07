@@ -21,5 +21,6 @@ class DetailViewController: UIViewController {
         
         nameLabel.text = person.name
         surnameLabel.text = person.surname
+        phoneLabel.text = person.phone
     }
 }

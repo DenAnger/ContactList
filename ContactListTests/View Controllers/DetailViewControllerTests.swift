@@ -61,6 +61,11 @@ class DetailViewControllerTests: XCTestCase {
         XCTAssertEqual(sut.surnameLabel.text, "Bar")
     }
     
+    func testSetValueToPhoneLabel() {
+        setupContactAndAppearanceTransition()
+        XCTAssertEqual(sut.phoneLabel.text, "Baz")
+    }
+    
     func setupContactAndAppearanceTransition() {
         let person = Person(name: "Foo", surname: "Bar", phone: "Baz")
         sut.person = person
