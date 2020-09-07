@@ -73,9 +73,25 @@
                     <view key="view" contentMode="scaleToFill" id="XVQ-bR-ShX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zVT-BB-OKb">
+                                <rect key="frame" x="161.5" y="314" width="91" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="zSH-8A-syR" firstAttribute="bottom" secondItem="zVT-BB-OKb" secondAttribute="bottom" constant="527" id="1LW-s8-U2q"/>
+                            <constraint firstItem="zVT-BB-OKb" firstAttribute="top" secondItem="zSH-8A-syR" secondAttribute="top" constant="270" id="9Ih-OU-uTb"/>
+                            <constraint firstItem="zVT-BB-OKb" firstAttribute="centerX" secondItem="XVQ-bR-ShX" secondAttribute="centerX" id="mgt-gA-jSd"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="zSH-8A-syR"/>
                     </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="zVT-BB-OKb" id="MSP-PW-fci"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PXU-8M-6hC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

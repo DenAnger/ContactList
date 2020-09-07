@@ -29,4 +29,13 @@ class DetailViewControllerTests: XCTestCase {
         sut.loadViewIfNeeded()
         XCTAssertNotNil(sut.nameLabel)
     }
+    
+    func testHasNameLabelInView() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let sut = storyboard.instantiateViewController(
+            withIdentifier: "DetailViewController"
+        ) as! DetailViewController
+        sut.loadViewIfNeeded()
+        XCTAssertTrue(sut.nameLabel.isDescendant(of: sut.view))
+    }
 }
