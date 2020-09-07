@@ -66,5 +66,20 @@
             </objects>
             <point key="canvasLocation" x="139" y="117"/>
         </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="v5D-0Y-R3I">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewController" id="fZv-UY-lnx" customClass="DetailViewController" customModule="ContactList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XVQ-bR-ShX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="zSH-8A-syR"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PXU-8M-6hC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="906" y="117"/>
+        </scene>
     </scenes>
 </document>
