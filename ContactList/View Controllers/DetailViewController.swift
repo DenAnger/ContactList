@@ -12,4 +12,5 @@ class DetailViewController: UIViewController {
     
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var surnameLabel: UILabel!
+    var phoneLabel = UILabel()
 }
