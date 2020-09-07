@@ -52,20 +52,19 @@ class DetailViewControllerTests: XCTestCase {
     }
     
     func testSetValueToNameLabel() {
-        let person = Person(name: "Foo", phone: "Bar")
-        sut.person = person
-        
-        sut.beginAppearanceTransition(true, animated: true)
-        sut.endAppearanceTransition()
+        setupContactAndAppearanceTransition()
         XCTAssertEqual(sut.nameLabel.text, "Foo")
     }
     
     func testSetValueToSurnameLabel() {
+        setupContactAndAppearanceTransition()
+        XCTAssertEqual(sut.surnameLabel.text, "Bar")
+    }
+    
+    func setupContactAndAppearanceTransition() {
         let person = Person(name: "Foo", surname: "Bar", phone: "Baz")
         sut.person = person
-        
         sut.beginAppearanceTransition(true, animated: true)
         sut.endAppearanceTransition()
-        XCTAssertEqual(sut.surnameLabel.text, "Bar")
     }
 }
