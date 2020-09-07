@@ -20,5 +20,6 @@ class DetailViewController: UIViewController {
         super.viewWillAppear(animated)
         
         nameLabel.text = person.name
+        surnameLabel.text = person.surname
     }
 }
