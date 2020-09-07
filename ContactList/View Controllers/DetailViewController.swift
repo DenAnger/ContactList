@@ -13,4 +13,12 @@ class DetailViewController: UIViewController {
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var surnameLabel: UILabel!
     @IBOutlet var phoneLabel: UILabel!
+    
+    var person: Person!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        nameLabel.text = person.name
+    }
 }

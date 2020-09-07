@@ -51,4 +51,12 @@ class DetailViewControllerTests: XCTestCase {
         XCTAssertTrue(sut.phoneLabel.isDescendant(of: sut.view))
     }
     
+    func testSetValueToNameLabel() {
+        let person = Person(name: "Foo", phone: "Bar")
+        sut.person = person
+        
+        sut.beginAppearanceTransition(true, animated: true)
+        sut.endAppearanceTransition()
+        XCTAssertEqual(sut.nameLabel.text, "Foo")
+    }
 }
