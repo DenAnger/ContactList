@@ -10,32 +10,28 @@ import XCTest
 @testable import ContactList
 
 class DetailViewControllerTests: XCTestCase {
+    
+    var sut: DetailViewController!
 
     override func setUpWithError() throws {
         try super.setUpWithError()
-        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        sut = storyboard.instantiateViewController(
+            withIdentifier: "DetailViewController"
+        ) as? DetailViewController
+        sut.loadViewIfNeeded()
     }
 
     override func tearDownWithError() throws {
-        
+        sut = nil
         try super.tearDownWithError()
     }
     
     func testHasNameLabel() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let sut = storyboard.instantiateViewController(
-            withIdentifier: "DetailViewController"
-        ) as! DetailViewController
-        sut.loadViewIfNeeded()
         XCTAssertNotNil(sut.nameLabel)
     }
     
     func testHasNameLabelInView() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let sut = storyboard.instantiateViewController(
-            withIdentifier: "DetailViewController"
-        ) as! DetailViewController
-        sut.loadViewIfNeeded()
         XCTAssertTrue(sut.nameLabel.isDescendant(of: sut.view))
     }
 }
