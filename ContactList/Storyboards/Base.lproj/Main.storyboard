@@ -122,5 +122,35 @@
             </objects>
             <point key="canvasLocation" x="906" y="117"/>
         </scene>
+        <!--New Contact View Controller-->
+        <scene sceneID="sVI-Kr-y5K">
+            <objects>
+                <viewController storyboardIdentifier="NewContactViewController" id="NNb-vo-Ml0" customClass="NewContactViewController" customModule="ContactList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VaH-iS-DCC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aJE-pw-t7O">
+                                <rect key="frame" x="80" y="124" width="254" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="aJE-pw-t7O" firstAttribute="top" secondItem="Pya-t7-Nl3" secondAttribute="top" constant="80" id="7rL-R3-lDX"/>
+                            <constraint firstItem="aJE-pw-t7O" firstAttribute="leading" secondItem="Pya-t7-Nl3" secondAttribute="leading" constant="80" id="T9J-bb-PpG"/>
+                            <constraint firstItem="Pya-t7-Nl3" firstAttribute="trailing" secondItem="aJE-pw-t7O" secondAttribute="trailing" constant="80" id="v95-Ju-QMe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Pya-t7-Nl3"/>
+                    </view>
+                    <connections>
+                        <outlet property="nameTextField" destination="aJE-pw-t7O" id="18g-KY-jJB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TMH-Cj-uRz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1630" y="117"/>
+        </scene>
     </scenes>
 </document>
