@@ -20,8 +20,12 @@ class DetailViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        guard let imageData = person.imageData else { return }
+        guard let image = UIImage(data: imageData) else { return }
+        
         nameLabel.text = person.name
         surnameLabel.text = person.surname
         phoneLabel.text = person.phone
+        imageView.image = image
     }
 }

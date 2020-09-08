@@ -80,6 +80,11 @@ class DetailViewControllerTests: XCTestCase {
         XCTAssert(sut.person.imageData == imageData)
     }
     
+    func testImageViewNotNil() {
+        setupContactAndAppearanceTransition()
+        XCTAssertNotNil(sut.imageView.image)
+    }
+    
     func setupContactAndAppearanceTransition() {
         let image = #imageLiteral(resourceName: "avatar")
         let imageData = image.pngData()
