@@ -74,8 +74,19 @@ class DetailViewControllerTests: XCTestCase {
         XCTAssertEqual(sut.phoneLabel.text, "Baz")
     }
     
+    func testSetValueToImageView() {
+        setupContactAndAppearanceTransition()
+        let imageData = #imageLiteral(resourceName: "avatar").pngData()
+        XCTAssert(sut.person.imageData == imageData)
+    }
+    
     func setupContactAndAppearanceTransition() {
-        let person = Person(name: "Foo", surname: "Bar", phone: "Baz")
+        let image = #imageLiteral(resourceName: "avatar")
+        let imageData = image.pngData()
+        let person = Person(name: "Foo",
+                            surname: "Bar",
+                            phone: "Baz",
+                            imageData: imageData)
         sut.person = person
         sut.beginAppearanceTransition(true, animated: true)
         sut.endAppearanceTransition()
