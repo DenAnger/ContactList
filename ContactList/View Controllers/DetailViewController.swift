@@ -13,7 +13,7 @@ class DetailViewController: UIViewController {
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var surnameLabel: UILabel!
     @IBOutlet var phoneLabel: UILabel!
-    var imageView = UIImageView()
+    @IBOutlet var imageView: UIImageView!
     
     var person: Person!
     

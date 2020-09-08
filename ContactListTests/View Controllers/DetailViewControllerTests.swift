@@ -55,6 +55,10 @@ class DetailViewControllerTests: XCTestCase {
         XCTAssertNotNil(sut.imageView)
     }
     
+    func testHasImageViewInView() {
+        XCTAssertTrue(sut.imageView.isDescendant(of: sut.view))
+    }
+    
     func testSetValueToNameLabel() {
         setupContactAndAppearanceTransition()
         XCTAssertEqual(sut.nameLabel.text, "Foo")
