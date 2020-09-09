@@ -140,13 +140,21 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pkf-vv-ZE2">
+                                <rect key="frame" x="80" y="292" width="254" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="Pkf-vv-ZE2" firstAttribute="top" secondItem="jTu-BG-qR6" secondAttribute="bottom" constant="50" id="0cU-tW-3dO"/>
                             <constraint firstItem="aJE-pw-t7O" firstAttribute="top" secondItem="Pya-t7-Nl3" secondAttribute="top" constant="80" id="7rL-R3-lDX"/>
+                            <constraint firstItem="Pya-t7-Nl3" firstAttribute="trailing" secondItem="Pkf-vv-ZE2" secondAttribute="trailing" constant="80" id="8zd-A2-F0z"/>
                             <constraint firstItem="jTu-BG-qR6" firstAttribute="leading" secondItem="Pya-t7-Nl3" secondAttribute="leading" constant="80" id="KvI-Mj-ktL"/>
                             <constraint firstItem="Pya-t7-Nl3" firstAttribute="trailing" secondItem="jTu-BG-qR6" secondAttribute="trailing" constant="80" id="RhA-W0-LLo"/>
                             <constraint firstItem="aJE-pw-t7O" firstAttribute="leading" secondItem="Pya-t7-Nl3" secondAttribute="leading" constant="80" id="T9J-bb-PpG"/>
+                            <constraint firstItem="Pkf-vv-ZE2" firstAttribute="leading" secondItem="Pya-t7-Nl3" secondAttribute="leading" constant="80" id="hHh-QW-yUs"/>
                             <constraint firstItem="jTu-BG-qR6" firstAttribute="top" secondItem="aJE-pw-t7O" secondAttribute="bottom" constant="50" id="lvR-QL-Obf"/>
                             <constraint firstItem="Pya-t7-Nl3" firstAttribute="trailing" secondItem="aJE-pw-t7O" secondAttribute="trailing" constant="80" id="v95-Ju-QMe"/>
                         </constraints>
@@ -154,6 +162,7 @@
                     </view>
                     <connections>
                         <outlet property="nameTextField" destination="aJE-pw-t7O" id="18g-KY-jJB"/>
+                        <outlet property="phoneTextField" destination="Pkf-vv-ZE2" id="yqN-La-TdZ"/>
                         <outlet property="surnameTextField" destination="jTu-BG-qR6" id="cac-Ze-5HL"/>
                     </connections>
                 </viewController>
