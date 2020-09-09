@@ -10,31 +10,28 @@ import XCTest
 @testable import ContactList
 
 class NewContactViewControllerTests: XCTestCase {
+    
+    var sut: NewContactViewController!
 
     override func setUpWithError() throws {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        sut = storyboard.instantiateViewController(
+            withIdentifier: "NewContactViewController"
+            ) as? NewContactViewController
+        sut.loadViewIfNeeded()
         try super.setUpWithError()
     }
 
     override func tearDownWithError() throws {
-        
+        sut = nil
         try super.tearDownWithError()
     }
     
     func testHasNameTextField() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let sut = storyboard.instantiateViewController(
-            withIdentifier: "NewContactViewController"
-            ) as! NewContactViewController
-        sut.loadViewIfNeeded()
         XCTAssertTrue(sut.nameTextField.isDescendant(of: sut.view))
     }
     
     func testHasSurnameTextField() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let sut = storyboard.instantiateViewController(
-            withIdentifier: "NewContactViewController"
-            ) as! NewContactViewController
-        sut.loadViewIfNeeded()
         XCTAssertTrue(sut.surnameTextField.isDescendant(of: sut.view))
     }
 }
