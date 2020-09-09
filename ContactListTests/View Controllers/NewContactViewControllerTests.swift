@@ -28,4 +28,13 @@ class NewContactViewControllerTests: XCTestCase {
         sut.loadViewIfNeeded()
         XCTAssertTrue(sut.nameTextField.isDescendant(of: sut.view))
     }
+    
+    func testHasSurnameTextField() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let sut = storyboard.instantiateViewController(
+            withIdentifier: "NewContactViewController"
+            ) as! NewContactViewController
+        sut.loadViewIfNeeded()
+        XCTAssertTrue(sut.surnameTextField.isDescendant(of: sut.view))
+    }
 }

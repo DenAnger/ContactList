@@ -20,14 +20,14 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="LKz-GM-5T0" customClass="ContactCell" customModule="ContactList" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LKz-GM-5T0" id="Xm0-L5-fdJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rOE-I2-IbN">
-                                                    <rect key="frame" x="20" y="11" width="374" height="21"/>
+                                                    <rect key="frame" x="20" y="11" width="374" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -135,17 +135,26 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Surname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jTu-BG-qR6">
+                                <rect key="frame" x="80" y="208" width="254" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="aJE-pw-t7O" firstAttribute="top" secondItem="Pya-t7-Nl3" secondAttribute="top" constant="80" id="7rL-R3-lDX"/>
+                            <constraint firstItem="jTu-BG-qR6" firstAttribute="leading" secondItem="Pya-t7-Nl3" secondAttribute="leading" constant="80" id="KvI-Mj-ktL"/>
+                            <constraint firstItem="Pya-t7-Nl3" firstAttribute="trailing" secondItem="jTu-BG-qR6" secondAttribute="trailing" constant="80" id="RhA-W0-LLo"/>
                             <constraint firstItem="aJE-pw-t7O" firstAttribute="leading" secondItem="Pya-t7-Nl3" secondAttribute="leading" constant="80" id="T9J-bb-PpG"/>
+                            <constraint firstItem="jTu-BG-qR6" firstAttribute="top" secondItem="aJE-pw-t7O" secondAttribute="bottom" constant="50" id="lvR-QL-Obf"/>
                             <constraint firstItem="Pya-t7-Nl3" firstAttribute="trailing" secondItem="aJE-pw-t7O" secondAttribute="trailing" constant="80" id="v95-Ju-QMe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Pya-t7-Nl3"/>
                     </view>
                     <connections>
                         <outlet property="nameTextField" destination="aJE-pw-t7O" id="18g-KY-jJB"/>
+                        <outlet property="surnameTextField" destination="jTu-BG-qR6" id="cac-Ze-5HL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TMH-Cj-uRz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -10,4 +10,5 @@ import UIKit
 
 class NewContactViewController: UIViewController {
     @IBOutlet var nameTextField: UITextField!
+    @IBOutlet var surnameTextField: UITextField!
 }
