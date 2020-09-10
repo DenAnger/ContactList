@@ -20,14 +20,14 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="LKz-GM-5T0" customClass="ContactCell" customModule="ContactList" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LKz-GM-5T0" id="Xm0-L5-fdJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rOE-I2-IbN">
-                                                    <rect key="frame" x="20" y="11" width="374" height="21.5"/>
+                                                    <rect key="frame" x="20" y="11" width="374" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -145,6 +145,10 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yzb-FW-v8p">
+                                <rect key="frame" x="190" y="433" width="34" height="30"/>
+                                <state key="normal" title="Save"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -157,12 +161,15 @@
                             <constraint firstItem="Pkf-vv-ZE2" firstAttribute="leading" secondItem="Pya-t7-Nl3" secondAttribute="leading" constant="80" id="hHh-QW-yUs"/>
                             <constraint firstItem="jTu-BG-qR6" firstAttribute="top" secondItem="aJE-pw-t7O" secondAttribute="bottom" constant="50" id="lvR-QL-Obf"/>
                             <constraint firstItem="Pya-t7-Nl3" firstAttribute="trailing" secondItem="aJE-pw-t7O" secondAttribute="trailing" constant="80" id="v95-Ju-QMe"/>
+                            <constraint firstItem="Yzb-FW-v8p" firstAttribute="centerX" secondItem="VaH-iS-DCC" secondAttribute="centerX" id="wG5-yN-l5X"/>
+                            <constraint firstItem="Yzb-FW-v8p" firstAttribute="centerY" secondItem="VaH-iS-DCC" secondAttribute="centerY" id="z01-2b-80O"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Pya-t7-Nl3"/>
                     </view>
                     <connections>
                         <outlet property="nameTextField" destination="aJE-pw-t7O" id="18g-KY-jJB"/>
                         <outlet property="phoneTextField" destination="Pkf-vv-ZE2" id="yqN-La-TdZ"/>
+                        <outlet property="saveButton" destination="Yzb-FW-v8p" id="b7i-Ym-oSL"/>
                         <outlet property="surnameTextField" destination="jTu-BG-qR6" id="cac-Ze-5HL"/>
                     </connections>
                 </viewController>

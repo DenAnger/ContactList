@@ -38,4 +38,8 @@ class NewContactViewControllerTests: XCTestCase {
     func testHasPhoneTextField() {
         XCTAssertTrue(sut.phoneTextField.isDescendant(of: sut.view))
     }
+    
+    func testHasSaveButton() {
+        XCTAssertTrue(sut.saveButton.isDescendant(of: sut.view))
+    }
 }
