@@ -20,14 +20,14 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="LKz-GM-5T0" customClass="ContactCell" customModule="ContactList" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LKz-GM-5T0" id="Xm0-L5-fdJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rOE-I2-IbN">
-                                                    <rect key="frame" x="20" y="11" width="374" height="21"/>
+                                                    <rect key="frame" x="20" y="11" width="374" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -149,7 +149,7 @@
                                 <rect key="frame" x="190" y="433" width="34" height="30"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
-                                    <action selector="saveButtonPressed" destination="NNb-vo-Ml0" eventType="touchUpInside" id="hZY-Bv-4oF"/>
+                                    <action selector="saveButtonPressed" destination="NNb-vo-Ml0" eventType="touchUpInside" id="ODO-0M-kOW"/>
                                 </connections>
                             </button>
                         </subviews>

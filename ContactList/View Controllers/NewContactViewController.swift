@@ -27,6 +27,5 @@ class NewContactViewController: UIViewController {
                             phone: phone ?? "",
                             imageData: imageData)
         contactManager.add(person: person)
-        dismiss(animated: true)
     }
 }
