@@ -42,4 +42,21 @@ class NewContactViewControllerTests: XCTestCase {
     func testHasSaveButton() {
         XCTAssertTrue(sut.saveButton.isDescendant(of: sut.view))
     }
+    
+    func testSaveNewContact() {
+        sut.nameTextField.text = "Foo"
+        sut.surnameTextField.text = "Bar"
+        sut.phoneTextField.text = "Baz"
+        
+        sut.contactManager = ContactManager()
+        sut.saveButtonPressed()
+        
+        let contact = sut.contactManager.person(at: 0)
+        let imageData = #imageLiteral(resourceName: "avatar").pngData()
+        let person = Person(name: "Foo",
+                            surname: "Bar",
+                            phone: "Baz",
+                            imageData: imageData)
+        XCTAssertEqual(contact, person)
+    }
 }
