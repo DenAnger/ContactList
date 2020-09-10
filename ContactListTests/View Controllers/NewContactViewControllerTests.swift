@@ -59,4 +59,15 @@ class NewContactViewControllerTests: XCTestCase {
                             imageData: imageData)
         XCTAssertEqual(contact, person)
     }
+    
+    func testSaveButtonHasSaveMethod() {
+        let saveButton = sut.saveButton
+        guard let actions = saveButton?.actions(forTarget: sut,
+                                                forControlEvent: .touchUpInside)
+            else {
+                XCTFail()
+                return
+        }
+        XCTAssertTrue(actions.contains("saveButtonPressed"))
+    }
 }
