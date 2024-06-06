@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -129,14 +129,14 @@
 			path = Supports;
 			sourceTree = "<group>";
 		};
-		6903DED424F5796D0005BEAE /* View Controllers */ = {
+		6903DED424F5796D0005BEAE /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				6932417524F5763900E83EDA /* ContactListViewController.swift */,
 				69424AE525060824003A8902 /* DetailViewController.swift */,
 				6936DC7A2507961300B14EA3 /* NewContactViewController.swift */,
 			);
-			path = "View Controllers";
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		6903DED524F5797F0005BEAE /* Resources */ = {
@@ -188,10 +188,10 @@
 		6932417024F5763900E83EDA /* ContactList */ = {
 			isa = PBXGroup;
 			children = (
-				696E558624FE269D0080FE60 /* Views */,
-				6903DED424F5796D0005BEAE /* View Controllers */,
-				696C5FD924FBA3CD00FB5660 /* Helprs */,
 				6903DED124F579380005BEAE /* Models */,
+				696E558624FE269D0080FE60 /* Views */,
+				6903DED424F5796D0005BEAE /* Controllers */,
+				696C5FD924FBA3CD00FB5660 /* Helprs */,
 				6903DED224F5794A0005BEAE /* Storyboards */,
 				6903DED524F5797F0005BEAE /* Resources */,
 				6903DED324F579590005BEAE /* Supports */,
@@ -202,10 +202,10 @@
 		6932418724F5763F00E83EDA /* ContactListTests */ = {
 			isa = PBXGroup;
 			children = (
-				696E558724FE26CF0080FE60 /* Views */,
-				696E558824FE26D80080FE60 /* View Controllers */,
-				696C5FD624FBA22D00FB5660 /* Helpers */,
 				6932506124FB5D9600F7F72B /* Models */,
+				696E558724FE26CF0080FE60 /* Views */,
+				696E558824FE26D80080FE60 /* Controllers */,
+				696C5FD624FBA22D00FB5660 /* Helpers */,
 				6903DED624F57A1C0005BEAE /* Supports */,
 			);
 			path = ContactListTests;
@@ -261,14 +261,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		696E558824FE26D80080FE60 /* View Controllers */ = {
+		696E558824FE26D80080FE60 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				696E558924FE273B0080FE60 /* ContactListViewControllerTests.swift */,
 				6937A0D12504BF130054D936 /* DetailViewControllerTests.swift */,
 				6936DC782507953F00B14EA3 /* NewContactViewControllerTests.swift */,
 			);
-			path = "View Controllers";
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,8 +333,9 @@
 		6932416624F5763800E83EDA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1160;
-				LastUpgradeCheck = 1160;
+				LastUpgradeCheck = 1540;
 				ORGANIZATIONNAME = "Denis Abramov";
 				TargetAttributes = {
 					6932416D24F5763900E83EDA = {
@@ -498,6 +499,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -508,6 +510,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -558,6 +561,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -568,6 +572,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
